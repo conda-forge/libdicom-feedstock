@@ -9,8 +9,11 @@ source:
   sha256: 3b88f267b58009005bc1182d8bd0c4a3218013ce202da722e5e8c9867c6f94f4
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
+  run_exports:
+    # just a guess
+    - {{ pin_subpackage('libdicom', max_pin='x.x') }}
 
 requirements:
   build:
