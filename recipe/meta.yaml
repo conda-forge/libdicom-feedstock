@@ -1,4 +1,4 @@
-{% set version = "1.0.5" %}
+{% set version = "1.1.0" %}
 
 package:
   name: libdicom
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/ImagingDataCommons/libdicom/releases/download/v{{ version }}/libdicom-{{ version }}.tar.xz
-  sha256: 3b88f267b58009005bc1182d8bd0c4a3218013ce202da722e5e8c9867c6f94f4
+  sha256: 058bfaa7653c60a70798e021001d765e3f91ca4df5a8824b7604eaa57376449b
 
 build:
-  number: 1
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
   run_exports:
     # just a guess
     - {{ pin_subpackage('libdicom', max_pin='x.x') }}
